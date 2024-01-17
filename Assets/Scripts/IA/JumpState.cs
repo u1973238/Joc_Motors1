@@ -19,6 +19,7 @@ public class JumpState : State
     public override State RunCurrentState()
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        Debug.Log(rb.velocity);
         return fallState;
     }
 }
