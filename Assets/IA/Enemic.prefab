@@ -250,9 +250,9 @@ GameObject:
   - component: {fileID: 7162907902510947079}
   - component: {fileID: 1448260412086098082}
   - component: {fileID: 3570226911696507808}
-  - component: {fileID: 719380173657320417}
   - component: {fileID: 3736754499474875235}
   - component: {fileID: 2100210378255880400}
+  - component: {fileID: 7895451414452386166}
   m_Layer: 0
   m_Name: Enemic
   m_TagString: Untagged
@@ -348,27 +348,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23326728, y: 0.3139761}
   m_EdgeRadius: 0
---- !u!95 &719380173657320417
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7958779559563666711}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 57dd6a9d4204fc7468da7dd2d0fd3c77, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &3736754499474875235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -434,4 +413,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Body: {fileID: 7958779559563666711}
-  animator: {fileID: 719380173657320417}
+--- !u!95 &7895451414452386166
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7958779559563666711}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b18339239acf3b44b943f205207d032b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

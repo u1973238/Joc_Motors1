@@ -11,7 +11,7 @@ TagManager:
   - Terrain
   - Water
   - UI
-  - 
+  - IA
   - 
   - 
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 937304811
+    locked: 0
+  - name: IA
+    uniqueID: 3883029701
     locked: 0
   - name: Terrain
     uniqueID: 3460295633

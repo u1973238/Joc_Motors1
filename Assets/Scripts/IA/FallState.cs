@@ -26,13 +26,14 @@ public class FallState : State
     {
         if (!inici)
         {
-            
+            Body.TrFall();
             float directionX = Mathf.Sign(FallTargets[currentFallIndex].transform.position.x - Body.transform.position.x);
             Body.Flip(directionX);
             inici = true;
         }
         if (Vector2.Distance(Body.transform.position, FallTargets[currentFallIndex].position) < 1f)
         {
+            Debug.Log("Fall: " + currentFallIndex);
             // Move to the next jump point in the list
             currentFallIndex = (currentFallIndex + 1) % FallTargets.Count;
             inici = false;

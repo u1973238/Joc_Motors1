@@ -6,7 +6,12 @@ public class Enemy : MonoBehaviour
 {
     public GameObject Body;
 
-    public Animator animator;
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     public void Flip(float dir)
     {
@@ -19,8 +24,16 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void SetAtack(bool i)
+    public void TrRun()
     {
-        animator.SetBool("AttackRange", i);
+        animator.SetTrigger("TrRun");
+    }
+    public void TrJump()
+    {
+        animator.SetTrigger("TrJump");
+    }
+    public void TrFall()
+    {
+        animator.SetTrigger("TrFall");
     }
 }
