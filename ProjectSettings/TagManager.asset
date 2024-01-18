@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - IA
-  - 
+  - PauseMenu
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Terrain
     uniqueID: 3460295633
+    locked: 0
+  - name: PauseMenu
+    uniqueID: 1511102277
     locked: 0

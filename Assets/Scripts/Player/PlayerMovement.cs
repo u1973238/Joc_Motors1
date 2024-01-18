@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject PauseMenu;
+
     private Rigidbody2D rbPersonatge;
     private Animator anim;
     private SpriteRenderer sprite;
@@ -55,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Keypad1) && canDash){
             StartCoroutine(Dash());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            PauseMenu.SetActive(true);
         }
 
         UpdateAnimationState();

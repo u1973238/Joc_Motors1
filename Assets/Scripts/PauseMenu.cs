@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
-public class GameMenuManager : MonoBehaviour
+public class PauseMenu : MonoBehaviour
 {
     public int MenuScen = 0;
     public int gameStardScen = 1;
 
-    public TextMeshProUGUI TextNumber;
     public Slider VolumeSlider;
+    public TextMeshProUGUI TextNumber;
 
     public AudioMixer mixer;
+
     public TMPro.TMP_Dropdown resolutionDropdown;
 
     Resolution[] resolutions;
