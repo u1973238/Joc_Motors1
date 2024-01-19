@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpState : State
 {
-    public float jumpForce = 3f;
+    public float jumpForce = 10f;
     public Enemy Body;
 
     private Rigidbody2D rb;
@@ -19,8 +19,7 @@ public class JumpState : State
     public override State RunCurrentState()
     {
         Body.TrJump();
-        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        
+        rb.velocity = Vector2.up * jumpForce;
         return fallState;
     }
 }

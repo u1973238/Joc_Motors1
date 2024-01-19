@@ -1,17 +1,16 @@
 MenuPausa/HUD:
 	-Pausar la partida (fet)
-	-Estilitzar el menu
-	-Possar in timer
-	-*També es pot possar indicador de la distancia entre jugador
-	-Scale UI amb la mida de pantalla
+	-Estilitzar el menu (fet)
+	-Possar in timer (fet)
+	-Scale UI amb la mida de pantalla (fet)
 
 	-Fe una pentalla de seleció de personatges(Si tenim multiples personatges)
 
 IA:
 	-Completar el recurregut (fet)
-	-Polir una mica més
+	-Polir una mica més (Fe que la caiguda sigui moviment constant)
 
 Mapa:
 	-Event the punt final(fet)
-	-Si es fan multiples nivells fe pantalla entre nivels (Mes o meny fet)
+	-Si es fan multiples nivells fe pantalla entre nivels (Mes o meny fet) (Comprovar si hi ha més nivells)
 
