@@ -33,7 +33,7 @@ public class FallState : State
         }
         if (Vector2.Distance(Body.transform.position, FallTargets[currentFallIndex].position) < 1f)
         {
-            Debug.Log("Fall: " + currentFallIndex);
+            //Debug.Log("Fall: " + currentFallIndex);
             // Move to the next jump point in the list
             currentFallIndex = (currentFallIndex + 1) % FallTargets.Count;
             inici = false;

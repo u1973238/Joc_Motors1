@@ -1,0 +1,16 @@
+MenuPausa/HUD:
+	-Pausar la partida
+	-Estilitzar el menu
+	-Possar in timer
+	-*També es pot possar indicador de la distancia entre jugador
+
+	-Fe una pentalla de seleció de personatges(Si tenim multiples personatges)
+
+IA:
+	-Completar el recurregut
+	-Polir una mica més
+
+Mapa:
+	-Event the punt final
+	-Si es fan multiples nivells fe pantalla entre nivels
+

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public GameObject PauseMenu;
-
     private Rigidbody2D rbPersonatge;
     private Animator anim;
     private SpriteRenderer sprite;
@@ -26,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
 
     private Tutorial_GrapplingRope ropeInstance ; //Instancia filla, la corda de la Grappling gun
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,10 +55,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Keypad1) && canDash){
             StartCoroutine(Dash());
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            PauseMenu.SetActive(true);
         }
 
         UpdateAnimationState();
