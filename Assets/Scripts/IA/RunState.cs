@@ -33,7 +33,6 @@ public class RunState : State
         }
         if (Vector2.Distance(Body.transform.position, JumpPoints[currentJumpIndex].position) < 1f)
         {
-            //Debug.Log("jump: " + currentJumpIndex);
             // Move to the next jump point in the list
             currentJumpIndex = (currentJumpIndex + 1) % JumpPoints.Count;
             inici = false;
@@ -41,7 +40,6 @@ public class RunState : State
         }
         if (Vector2.Distance(Body.transform.position, TurnPoints[currentTurnIndex].position) < 1f)
         {
-            //Debug.Log("turn:" + currentTurnIndex);
             direction = direction * -1;
            currentTurnIndex = (currentTurnIndex + 1) % TurnPoints.Count;
             Body.Flip(direction);

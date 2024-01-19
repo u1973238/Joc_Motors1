@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private enum MovementState {idle, running, jumping, falling}
     [SerializeField] private float moveSpeed = 14f;
     [SerializeField] private float jumpForce = 7f;
+    public float fallForce = 50f;
     private MovementState state;
     
     // Dash
@@ -24,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private TrailRenderer tr;
 
     private Tutorial_GrapplingRope ropeInstance ; //Instancia filla, la corda de la Grappling gun
+
+    public float raycastDistance = 0.2f;
+    public LayerMask groundLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -44,13 +48,24 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown("r")){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right * Mathf.Sign(dirX), raycastDistance, groundLayer);
 
+        if (hit.collider == null)
+        {
+            // No obstacle detected, so it's safe to move
+            rbPersonatge.velocity = new Vector2(dirX * moveSpeed, rbPersonatge.velocity.y);
+        }
         
-        rbPersonatge.velocity = new Vector2(dirX * moveSpeed, rbPersonatge.velocity.y);
+
         if(!ropeInstance.isGrappling){
             if (Input.GetButtonDown("Jump") && state != MovementState.jumping && state != MovementState.falling){
                 rbPersonatge.velocity = new Vector2(0f, jumpForce);
             }
+        }
+
+        if(Input.GetKeyDown("s"))
+        {
+            rbPersonatge.velocity = new Vector2(0f, -fallForce);
         }
 
         if (Input.GetKeyDown(KeyCode.Keypad1) && canDash){
@@ -99,6 +114,8 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-        Debug.Log("ara");
     }
+
+
+
 }
