@@ -8,6 +8,7 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    public GameObject PauseMenuUI;
     public int MenuScen = 0;
     public int gameStardScen = 1;
 
@@ -65,6 +66,7 @@ public class PauseMenu : MonoBehaviour
 
     public void MainMenu()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(MenuScen);
     }
 
@@ -87,5 +89,10 @@ public class PauseMenu : MonoBehaviour
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+    public void ContinueTheGame()
+    {
+        Time.timeScale = 1f;
+        PauseMenuUI.SetActive(false);
     }
 }

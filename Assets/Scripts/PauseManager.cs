@@ -11,9 +11,8 @@ public class PauseManager : MonoBehaviour
     void Update()
     {
         // Check for user input to toggle pause
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Pause");
             TogglePause();
         }
     }
