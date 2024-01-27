@@ -9,8 +9,13 @@ public class StickyPlatform : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             collision.gameObject.transform.SetParent(transform);
+            Debug.Log("plAY1");
         }
-
+        if (collision.gameObject.name == "Square")
+        {
+            Debug.Log("IA1");
+            collision.gameObject.transform.SetParent(transform);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -18,7 +23,13 @@ public class StickyPlatform : MonoBehaviour
         if(collision.gameObject.name == "Player")
         {
             collision.gameObject.transform.SetParent(null);
-        }
 
+            Debug.Log("PLAY2");
+        }
+        if (collision.gameObject.name == "Square")
+        {
+            Debug.Log("IA2");
+            collision.gameObject.transform.SetParent(null);
+        }
     }
 }
